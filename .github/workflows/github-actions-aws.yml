@@ -46,6 +46,6 @@ jobs:
       if: success()
       run: docker run -d -p 80:80 $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
 
-    - name: Test Failure
+    - name: Test failure
       if: failure()
       run: echo 'Build or tests failed'
