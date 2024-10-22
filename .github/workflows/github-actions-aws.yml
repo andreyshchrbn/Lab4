@@ -40,8 +40,6 @@ jobs:
 
     - name: Run tests in Docker container
       run: |
-        docker ps
-        docker images
         docker run --rm $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG test || exit 1
 
     - name: Run app in Docker container
